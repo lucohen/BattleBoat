@@ -367,7 +367,7 @@ bool bClose = false;
 // the target boat.
 // /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
 /\/\/\/\/\/\/\/\/\/\/\/\/\ //
-if ((abs(this->m_iRowBoat - iRow) <= 1) && (abs(this->m_iColumnBoat) <= 1))
+if ((abs(this->m_iRowBoat - iRow) <= 1) && (abs(this->m_iColumnBoat - iColumn) <= 1))
 {
 bClose = true;
 }
@@ -488,7 +488,7 @@ std::cout << "Magazine: " << this->m_nTorpedoes << " torpedoes" << std::endl;
 // Call the displayGrid member function with the bShowBoat parameter set to true.
 // /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
 /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\ //
-if (this->m_nTorpedoes > 0 && bSunk == false)
+if (this->m_nTorpedoes == 0 && bSunk == false)
 {
 // Display grid shown boat's location
 displayGrid(true);
